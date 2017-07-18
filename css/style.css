@@ -379,7 +379,7 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
   position: absolute;
   bottom: 37px;
   right: 0;
-  z-index: 99;
+  z-index: 9;
   color: #fff;
   overflow: hidden;
 }
@@ -428,6 +428,88 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
   float: right;
   width: 280px;
   text-align: center;
+}
+
+/* Block Research */
+.block_research {
+  padding-bottom: 55px;
+}
+.block_research .block_title h2 {
+  font-style: italic;
+  font-weight: 400;
+  padding: 35px 15px;
+}
+.research_list .research_item .research_img {
+  position: relative;
+  overflow: hidden;
+  border: 1px dashed #333;
+  border-top: none;
+}
+.research_list .research_item .research_img img {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+.research_list .research_item:hover .research_img img {
+  -webkit-transform: scale3d(1.2, 1.2, 1);
+  transform: scale3d(1.2, 1.2, 1);
+  background: #252525;
+  opacity: 0.8;
+}
+.research_list .research_item .description {
+  padding: 10px;
+}
+.research_list .research_item .description h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.research_list .research_item .description .info {
+  line-height: 1.4;
+  text-align: justify;
+}
+
+/*===== Footer =====*/
+.footer_main {
+  background: #313332;
+}
+.footer_main .content {
+  padding: 20px 25px 10px; 
+}
+.footer_main .content .block_logo_footer img {
+  margin-bottom: 10px;
+}
+.footer_main .content .block_logo_footer .btn_view-counter {
+  width: 235px;
+  background: #f1f1f1;
+  border-radius: 0;
+  color: #333;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 3px 12px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.footer_main .content .block_logo_footer .btn_view-counter:hover {
+  background: #fff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.footer_bot {
+  background: #252726;
+  padding: 15px 0;
+  color: #fff;
+}
+.footer_bot a {
+  color: #fff;
 }
 
 /*===== Back To Top =====*/
