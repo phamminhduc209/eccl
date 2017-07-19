@@ -19,7 +19,7 @@
 @import url(../lib/carousel/owl.carousel.min.css);
 @import url(../lib/lightbox/css/lightbox.min.css);
 @import url(../lib/select2/css/select2.min.css);
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700,700i');
 
 /*===== Layout Style =====*/
 * {
@@ -371,9 +371,9 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
 
 /* Slogan */
 .block_slogan {
-  padding: 27px;
-  background: rgba(0, 0, 0, 0.26);
-  max-width: 434px;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 438px;
   height: 125px;
   line-height: 1.1;
   position: absolute;
@@ -382,6 +382,7 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
   z-index: 9;
   color: #fff;
   overflow: hidden;
+  text-align: justify;
 }
 .block_slogan p {
   overflow: hidden;
@@ -411,6 +412,7 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
 .block_introduction .content {
   text-align: justify;
   word-break: break-all;
+  line-height: 30px;
 }
 
 /* Block Announcement */
@@ -425,9 +427,54 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
   border-bottom-left-radius: 40%;
   padding: 30px 20px;
   max-width: 280px;
-  float: right;
+  max-height: 215px;
   width: 280px;
+  height: 190px;
+  float: right;
+  overflow: hidden;
   text-align: center;
+  position: relative;
+  -webkit-box-shadow: 10px 10px 20px -10px rgba(0,0,0,1);
+  -moz-box-shadow: 10px 10px 20px -10px rgba(0,0,0,1);
+  box-shadow: 10px 10px 20px -10px rgba(0,0,0,1);
+}
+.box_inner .border_white {
+  border: 2px solid #fff;
+  width: 273px;
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  bottom: -5px;
+  left: -5px;
+  border-top-right-radius: 40%;
+  border-bottom-left-radius: 40%;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(51,51,51,0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(51,51,51,0.75);
+  box-shadow: 0px 0px 8px 0px rgba(51,51,51,0.75);
+}
+.box_inner .announcement-top,
+.box_inner .announcement-bot {
+  position: absolute;
+  width: 20px;
+  height: 14px;
+  z-index: 1;
+}
+.box_inner .announcement-top {
+  top: 5px;
+  left: 7px;
+  background: url("../images/qoute_top.png") no-repeat;
+}
+.box_inner .announcement-bot {
+  bottom: 5px;
+  right: 7px;
+  background: url("../images/qoute_bottom.png") no-repeat;
+}
+.block_announcement .content .item {
+  margin-bottom: 5px;
+}
+.block_announcement .content .item:last-child {
+  margin-bottom: 10px;
 }
 
 /* Block Research */
@@ -482,7 +529,7 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
   padding: 20px 25px 10px; 
 }
 .footer_main .content .block_logo_footer img {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .footer_main .content .block_logo_footer .btn_view-counter {
   width: 235px;
@@ -510,6 +557,62 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
 }
 .footer_bot a {
   color: #fff;
+}
+.footer_bot a:hover {
+  color: #9a9a9a;
+}
+
+/* Block Address */
+.block_contact_footer .block_title {
+  position: relative;
+  margin-bottom: 10px;
+}
+.block_contact_footer .block_title span {
+  background: #313332;
+  padding-right: 20px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.block_contact_footer .block_title span:after {
+  content: "";
+  border-top: 1px solid #fff;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: auto;
+  height: 2px;
+  width: 70%;
+}
+.block_contact_footer .block_address .item {
+  color: #fff;
+  font-weight: 300;
+  text-align: justify;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.block_contact_footer .block_address .item a {
+  color: #fff;
+  font-weight: 300;
+  font-size: 12px;
+}
+.block_contact_footer .block_address .item a:hover {
+  color: #9a9a9a;
+}
+.block_contact_footer .block_address .item {
+  float: left;
+  width: 100%;
+}
+.block_contact_footer .block_address .item .title,
+.block_contact_footer .block_address .item .description {
+  float: left;
+}
+.block_contact_footer .block_address .item .title {
+  width: 70px;
+}
+.block_contact_footer .block_address .item .description {
+  width: calc(100% - 70px);
 }
 
 /*===== Back To Top =====*/
