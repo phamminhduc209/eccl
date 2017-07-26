@@ -208,8 +208,9 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
   transition: all 0.2s linear;
 }
 .menu .navbar-nav>li:hover > a,
-.menu .navbar-nav>li.active {
+.menu .navbar-nav>li.active a {
   color: #3cc5d7;
+  background: transparent;
   -webkit-transition: all 0.45s ease;
   -o-transition: all 0.45s ease;
   -ms-transition: all 0.45s ease;
