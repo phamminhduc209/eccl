@@ -20,7 +20,10 @@
 @import url(../lib/lightbox/css/lightbox.min.css);
 @import url(../lib/select2/css/select2.min.css);
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700,700i');
-
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700');
+/*.font-dosis {
+  font-family: 'Dosis', sans-serif;
+}*/
 /*===== Layout Style =====*/
 * {
   margin: 0;
@@ -124,8 +127,27 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
   background: #fff;
 }
 .block_wrapper2 {
-  padding: 35px 25px;
+  padding: 35px 25px 25px;
   background: #fff;
+}
+.readmore {
+  color: #757479;
+  font-size: 12px;
+  position: relative;
+  float: right;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.readmore:before {
+  content: "";
+  border-top: 1px solid #757479;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0 auto;
 }
 
 /*===== Header =====*/
@@ -571,21 +593,28 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
 }
 .block_contact_footer .block_title span {
   background: #313332;
-  padding-right: 20px;
   font-size: 20px;
   color: #fff;
   font-weight: 300;
   margin-bottom: 10px;
+  z-index: 2;
+  position: relative;
+  width: 35%;
+  display: block;
 }
-.block_contact_footer .block_title span:after {
+.block_contact_footer .block_title:after {
   content: "";
-  border-top: 1px solid #fff;
+  border-top: 2px solid #fff;
   position: absolute;
-  top: 50%;
+  top: 60%;
+  -webkit-transform: translate(0, -60%);
+  -ms-transform: translate(0, -60%);
+  transform: translate(0, -60%);
   right: 0;
   left: auto;
   height: 2px;
-  width: 70%;
+  width: 100%;
+  z-index: 1;
 }
 .block_contact_footer .block_address .item {
   color: #fff;
@@ -664,13 +693,15 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
   background-image: url("../images/Asset_3-100.jpg"); 
 }
 
-.block_img {
+/*===== Members =====*/
+/* Block IMG */
+.block_professor .block_img {
   float: left;
-  width: 226px;
+  width: 225px;
   background: #4b4f5a;
   padding: 18px;
 }
-.block_img .avatar {
+.block_professor .block_img .avatar {
   background: #fff;
   width: 145px;
   height: 190px;
@@ -678,7 +709,7 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
   margin: 0 auto;
   margin-bottom: 20px
 }
-.block_img .avatar img {
+.block_professor .block_img .avatar img {
   width: 100%;
 }
 .title_style1 {
@@ -692,7 +723,7 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
   margin-bottom: 10px;
   z-index: 2;
   position: relative;
-  width: 60%;
+  width: 65%;
   display: block;
 }
 .title_style1:after {
@@ -706,11 +737,12 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
   right: 0;
   left: auto;
   height: 2px;
-  width: 70%;
+  width: 100%;
   z-index: 1;
 }
-
-/*===== Block Sidebar =====*/
+.block_intro .title_style1 span {
+  margin-bottom: 5px;
+}
 .block_intro .description {
   border: 3px solid #fff;
   padding: 5px;
@@ -718,6 +750,289 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
   text-align: center;
   line-height: 190px;
   color: #fff;
+}
+.block_contact .description .info li {
+  margin-bottom: 15px;
+}
+.block_contact .description .info li > span.icon {
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 50px;
+  display: inline-block;
+  text-align: center;
+  line-height: 25px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.block_contact .description .info li span.text {
+  color: #fff;
+}
+.block_members_research .description .info li {
+  padding-left: 10px;
+  position: relative;
+  margin-bottom: 5px;
+}
+.block_members_research .description .info li:last-child {
+  margin-bottom: 0;
+}
+.block_members_research .description .info li:after {
+  content: "-";
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.block_members_research .description .info li p {
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Block Info */
+.block_professor .block_info {
+  float: left;
+  width: calc(100% - 235px);
+  margin-left: 10px;
+}
+.block_professor .block_info h2 {
+  color: #4B4F5A;
+  text-align: center;
+  font-size: 32px;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+.block_professor .block_info .description .block {
+  margin-bottom: 35px;
+}
+.block_title2 h3 {
+  margin-left: 57px;
+  position: relative;
+  color: #4B4F5A;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.block_title2 h3:after {
+  content: "";
+  border-top: 2px solid #4B4F5A;
+  display: block;
+  position: absolute;
+  top: -15px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 85%;
+}
+.block_professor .block_info .description .block_content {
+  padding: 15px 0;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.block_professor .block_info .description .block_content:before {
+  content: "";
+  border-left: 2px solid #4B4F5A;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 85px;
+}
+.block_professor .block_info .description .block_content li {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+.block_professor .block_info .description .block_content li:last-child {
+  margin-bottom: 0;
+}
+.block_professor .block_info .description .block_content li:nth-child(n+1) {
+  clear: both;
+}
+.block_professor .block_info .description .block_content .year {
+  position: relative;
+  float: left;
+  width: 85px;
+  margin-right: 15px;
+  color: #4B4F5A;
+}
+.block_professor .block_info .description .block_content .year:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #4B4F5A;
+  border-radius: 50px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.block_professor .block_info .description .block_content .biography {
+  float: left;
+  width: calc(100% - 100px);
+  color: #4B4F5A;
+  text-align: justify;
+}
+.block_professor .block_info .description .block_publications .block_content li {
+  float: left;
+  width: 100%;
+  position: relative;
+  height: 36px;
+  overflow: hidden;
+}
+.block_professor .block_info .description .block_publications .block_content:before {
+  left: 60px;
+}
+.block_professor .block_info .description .block_publications .block_content .year {
+  position: relative;
+  float: left;
+  width: 60px;
+  margin-right: 15px;
+  text-align: center;
+  line-height: 36px;
+}
+.block_professor .block_info .description .block_publications .block_content .biography {
+  float: left;
+  width: calc(100% - 75px);
+}
+.block_professor .block_info .description .block_publications .block_content .year:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #4B4F5A;
+  border-radius: 50px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 55px;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+/* Currunt Members */
+.block_current .block_img {
+  float: left;
+  width: 225px;
+  background: #4b4f5a;
+  padding: 8px 40px;
+}
+.block_img img {
+  width: 100%;
+}
+.block_current .block_info {
+  float: left;
+  width: calc(100% - 260px);
+  margin-left: 35px;
+}
+.block_current .list li {
+  margin-bottom: 20px;
+  float: left;
+  width: 100%;
+}
+.block_current .list li:last-child {
+  margin-bottom: 0;
+}
+.block_current .block_info h2.block_title {
+  color: #4f5054;
+  font-size: 29px;
+  display: block;
+  text-align: center;
+  border-bottom: 2px solid #4f5054;
+  padding-bottom: 10px;
+  margin-bottom: 8px;
+}
+.block_current .block_content p {
+  margin-bottom: 10px;
+  color: #000000;
+}
+.block_current .block_content p.research_field {
+  line-height: 1.6;
+  margin-bottom: 0;
+  height: 70px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  border-bottom: 2px solid #4f5054;
+}
+
+/* Alumni Members */
+.block_alumni .block_img {
+  float: left;
+  width: 225px;
+  background: #4b4f5a;
+  padding: 8px 40px;
+}
+.block_img img {
+  width: 100%;
+}
+.block_alumni .block_info {
+  float: left;
+  width: calc(100% - 260px);
+  margin-left: 35px;
+}
+.block_alumni .list li {
+  margin-bottom: 20px;
+  float: left;
+  width: 100%;
+}
+.block_alumni .list li:last-child {
+  margin-bottom: 0;
+}
+.block_alumni .block_info h2.block_title {
+  color: #4f5054;
+  font-size: 29px;
+  display: block;
+  text-align: center;
+  border-bottom: 2px solid #4f5054;
+  padding-bottom: 10px;
+  margin-bottom: 8px;
+}
+.block_alumni .block_content p {
+  margin-bottom: 10px;
+  color: #000000;
+}
+.block_alumni .block_content p.research_field {
+  line-height: 1.6;
+  margin-bottom: 0;
+  height: 70px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  border-bottom: 2px solid #4f5054;
+}
+
+/*===== Pagination =====*/
+.block_pagination .pagination {
+  margin-bottom: 0;
+  display: block;
+  text-align: center;
+}
+.block_pagination .pagination>li {
+  display: inline-block;
+}
+.block_pagination .pagination>li>a, .block_pagination .pagination>li>span {
+  position: relative;
+  float: left;
+  padding: 0 0;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: #4b4f5a;
+  text-decoration: none;
+  background-color: #fff;
+  border: none;
+}
+.block_pagination .pagination>li>span {
+  padding: 0;
+}
+.block_pagination .pagination>.active>a, .block_pagination .pagination>.active>a:focus, .block_pagination .pagination>.active>a:hover, .block_pagination .pagination>.active>span, .block_pagination .pagination>.active>span:focus, .block_pagination .pagination>.active>span:hover {
+  z-index: 3;
+  color: #000;
+  font-weight: bold;
+  cursor: default;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 /*===== Back To Top =====*/
