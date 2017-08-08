@@ -11,12 +11,25 @@
 9. 	
 10. Compare
 ------------------------*/
+
 /*----------------
 Styles for devices max 1200px
 */
 @media (min-width: 1200px) {
   .container {
     width: 1000px;
+  }
+}
+
+/*----------------
+Styles for devices max 992px
+*/
+@media (min-width: 992px) {
+  .block_menu {
+    width: 60%;
+  }
+  .block_search {
+    width: 23%;
   }
 }
 
@@ -33,8 +46,185 @@ Styles for devices max 991px
 Styles for devices max 800px
 */
 @media (max-width: 800px) {
-	
+  .block_menu {
+    width: 83.33%;
+  }
+  .block_search {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    z-index: 99;
+    width: 250px;
+    max-width: 250px;
+  }
+  .search_mb {
+    display: inline-block !important;
+  }
+  .block_search.open {
+    display: block;
+  }
 }
+
+/*----------------
+Styles for devices max 767px
+*/
+@media (max-width: 767px) {
+  .block_logo {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .block_logo img {
+    margin: 0 auto;
+  }
+  .block_menu {
+    width: 100%;
+    text-align: center;
+  }
+  .search_mb {
+    float: none;
+    margin-top: 0;
+  }
+}
+
+/*----------------
+Styles for devices max 768px
+*/
+@media (max-width: 600px) {
+  body.menu-open {
+    overflow: hidden;
+    left: 0;
+    right: 0;
+  }
+	/* Menu */
+  .nav-toogle {
+    display: block;
+  }
+  .block_menu {
+    background-color: #313332;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.15);
+    clear: both;
+    float: none;
+    display: block;
+    position: fixed !important;
+    left: -80% !important;
+    width: 80%;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    right: auto !important;
+  }
+  .block_menu.has-open {
+    left: 0 !important;
+  }
+  .nav_menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 99999;
+    background: #161615;
+    overflow-y: auto !important;
+  }
+  .nav_menu>li {
+    display: block;
+    border-bottom: 3px solid rgba(238, 238, 238, 0.1);
+  }
+  .nav_menu>li>a {
+    font-size: 14px;
+    text-align: left;
+    line-height: 20px;
+  }
+  .nav_menu > li.parent > a:after {
+    display: none;
+  }
+  .nav_menu li.parent .plus {
+    color: #ccc;
+    height: 35px;
+    border-left: 1px solid rgba(238, 238, 238, 0.1);
+    line-height: 35px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    z-index: 9;
+    cursor: pointer;
+  }
+  .nav_menu li.parent .plus:before {
+    content: "\f067";
+    font-family: 'FontAwesome';
+  }
+  .nav_menu li.parent .plus.open:before {
+    content: "\f068";
+  }
+  .nav_menu .submenu {
+    background: #161615;
+    box-shadow: none;
+    display: none;
+    left: 0px;
+    top: -10px;
+    opacity: 1;
+    padding: 0 10px 10px;
+    position: relative;
+    top: -10px;
+    visibility: visible;
+    width: 100%;
+  }
+  .nav_menu li:hover > .submenu {
+    top: -10px;
+    -webkit-transition: inherit;
+    transition: inherit;
+    -webkit-transform: translate(0, 10px);
+    -ms-transform: translate(0, 10px);
+    -o-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+  .nav_menu .submenu li a {
+    color: #fff;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.1);
+    padding: 0 0 0 10px;
+  }
+  .nav_menu .submenu .submenu {
+    left: 0;
+    top: -10px;
+  }
+  .nav_menu .submenu li:hover .submenu {
+    -webkit-transition: inherit;
+    transition: inherit;
+    -webkit-transform: translate(0, 10px);
+    -ms-transform: translate(0, 10px);
+    -o-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+  .search_mb {
+    display: none !important;
+  }
+  .block_search {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    width: 100%;
+    max-width: 100%;
+    clear: both;
+  }
+  .nav-toogle {
+    top: 95px;
+  }
+}
+
 /*----------------
 Styles for devices max 992px and min 320px
 */
@@ -48,34 +238,23 @@ Styles for devices max 992px and min 320px
     padding-right: 15px;
   }
 }
-/*----------------
-Styles for devices max 767px
-*/
-@media (max-width: 767px) {
-	
-}
-/*----------------
-Styles for devices max 600px
-*/
-@media (max-width: 600px) {
-	
-}
+
 /*----------------
 Styles for devices max 480px
 */
 @media (max-width: 480px) {
-	
-}
-/*----------------
-Styles for devices max 375px
-*/
-@media (max-width: 375px) {
-	
+  .block_slogan {
+    bottom: 0;
+    padding: 16px;
+  }
+  .block_slogan p {
+    font-size: 12px;
+  }
 }
 
-/*----------------
-Styles for devices max 320px
-*/
 @media (max-width: 320px) {
-	
+  .block_slogan {
+    position: relative;
+    height: auto;
+  }
 }

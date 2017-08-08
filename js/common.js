@@ -36,23 +36,29 @@
   /*  [ Sticky Menu ] */
   $('.fixed').sticky({ topSpacing: 0 });
 
-  /*[ hover dropdown ]
+  /*  [ Main Menu ]
   - - - - - - - - - - - - - - - - - - - - */
-  $('.customer-setting, .minicart-wrapper').hover(function() {
-    $(this).addClass('open');
-  },
-  function() {
-    $(this).removeClass('open');
+  $('.nav-toogle i').on( 'click', function() {
+    $(this).parent().toggleClass('has-open');
+    $(this).toggleClass('has-open');
+    $(this).parent().parent().toggleClass('has-open');
+    $('body').toggleClass('menu-open');
   });
 
-  // Accordion has icon arrow
-  $(document).on('click','.box-accordion > .accordion-header',function(event){
-    $(this).toggleClass('active');
-    $(this).toggleClass('opened');
-    $(this).next('.box-collapse').slideToggle(200);
+  /*  [ Main Menu ]
+  - - - - - - - - - - - - - - - - - - - - */
+  $(document).ready(function(){
+    $('.nav_menu li.parent').append('<span class="plus"></span>');
+    $('.nav_menu li.parent .plus').click(function(){
+      $(this).toggleClass('open').siblings('.submenu').slideToggle();
+    });
   });
 
-  /*  [ Sticky Menu ] */
-  // $('.fixed-header').sticky({ topSpacing: 0 });
+  /*  [ Show Search Mobile ]
+  - - - - - - - - - - - - - - - - - - - - */
+  $('.search_mb').on('click', function() {
+    $(this).toggleClass('open');
+    $('.block_search').toggleClass('open');
+  });
 
 })(jQuery); // End of use strict
